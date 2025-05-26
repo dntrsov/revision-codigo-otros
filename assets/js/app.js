@@ -14,7 +14,9 @@ async function displayUser(username) { //Se puso async
   if (!response.ok){ // Se agrega if, response.ok: Verifica si la respuesta es exitosa.
 
 
-    console.error(`Error al buscar usuario: ${response.status}`);
+    console.error(`Error al buscar usuario: ${response.status}`); //dar contexto sobre el tipo de error.
+    return response.status;
+
   }
 
   const data = await response.json(); // se delcara variable data y se pone await response json. Lee el cuerpo de la respuesta HTTP y lo parsea como un objeto JSON
