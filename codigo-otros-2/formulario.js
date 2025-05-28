@@ -1,5 +1,5 @@
 const formulario = document.querySelector(".formulario") // se cambia a .formulario
-
+//Se cambian variables var a const 
 formulario.onsubmit = function(e) {
 
   e.preventDefault(); //se agrega Default
